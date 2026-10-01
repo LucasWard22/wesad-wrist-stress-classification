@@ -102,22 +102,17 @@ Feature extraction was intentionally basic. BVP was represented by waveform summ
 
 ## 8. Data Sources and Reproduction
 
-The source data are WESAD wrist recordings from the Empatica E4 device. The raw dataset is not included in this repository. The original study is described in [Schmidt et al. (2018)](https://doi.org/10.1145/3242969.3242985), which also compared sensor modalities and device locations. This project is a simpler exploratory reanalysis with additional attention to participant-level failures. Its balanced accuracy results should not be directly compared with the original paper's reported accuracy as if they were the same metric and evaluation.
+This project uses wrist recordings from the WESAD dataset introduced by [Schmidt et al. (2018)](https://doi.org/10.1145/3242969.3242985). Raw recordings are not included in this repository.
 
-To reproduce the analysis, open [wesad_sensing_burden.ipynb](https://github.com/LucasWard22/wesad-wrist-stress-classification/blob/main/wesad_sensing_burden.ipynb) in Google Colab and run the cells in order. The opening cells download and extract WESAD into the runtime. Alternatively, obtain the data from the authors and place the participant folders inside `WESAD/` in the working directory. Only load pickle files obtained from the trusted dataset source. The final cells save outputs into `figures/` and `results/` and download them as a ZIP. The committed outputs are currently stored in the repository's top folder. The recorded environment is listed in [package_versions.csv](https://github.com/LucasWard22/wesad-wrist-stress-classification/blob/main/package_versions.csv); package changes may affect reproduction.
+To reproduce the analysis, open `wesad_sensing_burden.ipynb` in Google Colab and run the cells in order. The opening cells download and extract the dataset, while the final cells save the figures and result tables. Python and package versions are recorded in `package_versions.csv`.
 
-| File | Contents |
-| --- | --- |
-| [wesad_sensing_burden.ipynb](https://github.com/LucasWard22/wesad-wrist-stress-classification/blob/main/wesad_sensing_burden.ipynb) | Analysis code, saved outputs and explanatory text |
-| [wesad_wrist_features.csv](https://github.com/LucasWard22/wesad-wrist-stress-classification/blob/main/wesad_wrist_features.csv) | Features, condition labels and window timestamps |
-| [model_comparison.csv](https://github.com/LucasWard22/wesad-wrist-stress-classification/blob/main/model_comparison.csv) | Participant-level model comparison |
-| [sensor_set_results.csv](https://github.com/LucasWard22/wesad-wrist-stress-classification/blob/main/sensor_set_results.csv) | Primary sensor comparison |
-| [eda_temp_participant_metrics.csv](https://github.com/LucasWard22/wesad-wrist-stress-classification/blob/main/eda_temp_participant_metrics.csv) | Sensitivity, specificity, F1 and confusion counts |
-| [eda_temp_window_predictions.csv](https://github.com/LucasWard22/wesad-wrist-stress-classification/blob/main/eda_temp_window_predictions.csv) | Held-out window predictions |
-| [nonoverlap_sensor_results.csv](https://github.com/LucasWard22/wesad-wrist-stress-classification/blob/main/nonoverlap_sensor_results.csv) | Non-overlapping window results |
-| [window_overlap_comparison.csv](https://github.com/LucasWard22/wesad-wrist-stress-classification/blob/main/window_overlap_comparison.csv) | Summary of the two windowing schemes |
-| [calibration_comparison.csv](https://github.com/LucasWard22/wesad-wrist-stress-classification/blob/main/calibration_comparison.csv) | Raw and normalised calibration scores |
-| [package_versions.csv](https://github.com/LucasWard22/wesad-wrist-stress-classification/blob/main/package_versions.csv) | Python and package versions |
+The original WESAD study also compared sensor modalities. This project is an exploratory reanalysis using simpler features, with a focus on participant-level failures and robustness checks. Its balanced accuracy scores are not directly comparable with the original paper's reported accuracy.## 8. Data Sources and Reproduction
+
+This project uses wrist recordings from the WESAD dataset introduced by [Schmidt et al. (2018)](https://doi.org/10.1145/3242969.3242985). Raw recordings are not included in this repository.
+
+To reproduce the analysis, open `wesad_sensing_burden.ipynb` in Google Colab and run the cells in order. The opening cells download and extract the dataset, while the final cells save the figures and result tables. Python and package versions are recorded in `package_versions.csv`.
+
+The original WESAD study also compared sensor modalities. This project is an exploratory reanalysis using simpler features, with a focus on participant-level failures and robustness checks. Its balanced accuracy scores are not directly comparable with the original paper's reported accuracy.
 
 ## 9. Possible Extensions
 
