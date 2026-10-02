@@ -1,5 +1,17 @@
 # Wrist Sensor Combinations for Participant-Independent Stress Classification in WESAD
 
+## Summary
+
+**Question.** Which wrist-sensor signals are needed to identify the stress condition in people the model has not seen?
+
+**Method.** Recordings from 15 WESAD participants were divided into 60-second windows and classified as stress or non-stress using leave-one-subject-out cross-validation. Gradient boosting was applied to combinations of electrodermal activity (EDA), skin temperature, blood volume pulse (BVP) and movement.
+
+**Main result.** EDA and temperature reached a mean balanced accuracy of 0.80, similar to all four wrist signals (0.79) and higher than EDA alone (0.72). With non-overlapping windows the corresponding scores were 0.82, 0.82 and 0.71.
+
+**Main caveat.** Performance varied widely between participants, from chance level to near-perfect, and every stress window was missed for one participant. The analysis is exploratory, based on 15 people in a laboratory, and does not show that additional sensors are unnecessary.
+
+**Relevance to digital health studies.** The results illustrate why sensor choices for remote monitoring should be evaluated on unseen participants, reported per participant, and tested against participant burden, which was not measured here (see Section 4.1).
+
 ## Abstract
 
 Wearable stress classification relies on physiological signals that can vary substantially between individuals. This study examined whether combining wrist electrodermal activity (EDA) and skin temperature could achieve performance comparable to a larger set of sensor inputs. Recordings from 15 WESAD participants were divided into 60-second windows, and stress was classified against baseline and amusement using leave-one-subject-out cross-validation. EDA and temperature achieved a mean balanced accuracy of 0.801, compared with 0.716 for EDA alone and 0.786 for all wrist sensors. With non-overlapping windows, the corresponding scores were 0.823, 0.713 and 0.823. However, participant-level analysis revealed substantial differences in missed stress and false alarms. Baseline normalisation increased mean balanced accuracy from 0.789 to 0.814 on the remaining evaluation windows, without clear evidence of an overall improvement. EDA and temperature therefore provided a competitive combination under the methods examined, although the results do not establish sensor equivalence or reliable classification outside the laboratory.
