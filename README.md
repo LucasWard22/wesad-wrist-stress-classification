@@ -92,6 +92,18 @@ The participant-level results qualify the average performance. A model can achie
 
 The weak BVP-only result requires particular caution. BVP was represented by basic waveform summaries rather than pulse rate or pulse interval variability, so this analysis did not fully assess its physiological information. Acceleration magnitude likewise includes gravity and posture effects alongside movement. Classification may therefore reflect aspects of the experimental task as well as stress-related responses.
 
+### 4.1 Implications for digital health studies
+
+This analysis was not designed to select a device for a clinical study, but it illustrates considerations that are relevant when choosing sensing strategies for remote or decentralised data collection.
+
+First, a two-signal wrist configuration (EDA and temperature) performed about as well, on average, as the full four-signal set in these data. This would support including it as a candidate in a pilot comparison, rather than assuming that more sensors are needed. Any such pilot would need to measure participant burden directly, including comfort, adherence, battery life and missing data, since this analysis did not.
+
+Second, average performance concealed large differences between individuals. A team relying on a single summary metric would not have identified that the model missed every stress window for one participant and produced frequent false alarms for another. Reporting performance per participant, and deciding in advance how much individual-level failure is acceptable, would be important when validating any digital measure.
+
+Third, signal-quality checks and, where feasible, a short calibration period could help identify participants whose recordings are unlikely to be informative. In this analysis, baseline calibration did not provide a consistent benefit (mean balanced accuracy 0.789 to 0.814, improved for 9 of 15 participants, p = 0.561), so its value, and its cost in participant time, would need testing in a larger study.
+
+Finally, because movement features may reflect the task rather than the physiological response, any model that includes acceleration would need validation in conditions where activity differs from the original protocol, such as free-living data.
+
 ## 5. Limitations and Conclusion
 
 The study includes only 15 participants recorded in a laboratory. Experimental labels identify conditions rather than continuous subjective stress, and movement, posture, condition order and signal drift may contribute to prediction. Signal artefacts were not systematically assessed, overlapping windows are correlated, and the model and sensor rankings were inspected within the same cross-validation results. The follow-up analyses should therefore be treated as exploratory.
